@@ -2,8 +2,10 @@ package services;
 
 import entity.Produto;
 import org.springframework.beans.factory.annotation.Autowired;
+import repository.ProdutoRepository;
 
 import java.util.List;
+import java.util.Optional;
 
 public class ProdutoServices {
 
@@ -14,7 +16,7 @@ public class ProdutoServices {
             return produtoRepository.findAll();
         }
 
-        public void  deletarLivro(Long id){
+        public void  deletarProduto(Long id){
             produtoRepository.deleteById(id);
         }
 
@@ -26,5 +28,3 @@ public class ProdutoServices {
             return produtoRepository.findById(id);
         }
     }
-
-}

@@ -3,16 +3,17 @@ package controller;
 import entity.Produto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import services.ProdutoServices;
 
 import java.util.List;
 import java.util.Optional;
 
-@RequestController
-@RequestMapping
+@RestController
+@RequestMapping ("/produtos")
 public class ProdutoController {
 
         @Autowired
-        private ProdutoService produtoService;
+        private ProdutoServices produtoService;
 
 
         @GetMapping
@@ -38,5 +39,3 @@ public class ProdutoController {
 
 
     }
-
-}
